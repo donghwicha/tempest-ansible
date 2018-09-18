@@ -17,6 +17,5 @@
 ---
 - name: tempest | cleanup | Clear down tmp directory
   become: yes
-  become_user: "{{ tempest_user }}"
   shell: find /tmp -user {{ tempest_user }} -delete
   failed_when: false
